@@ -3,7 +3,7 @@ import edu.princeton.cs.algs4.StdStats;
 
 public class PercolationStats {
 
-    private static final double z975 = 1.96;
+    private static final double Z975 = 1.96;
     private int trials;
     private double[] frac;
 
@@ -42,12 +42,12 @@ public class PercolationStats {
 
     // low endpoint of 95% confidence interval
     public double confidenceLo() {
-        return mean() - z975 * stddev() / Math.sqrt(trials);
+        return mean() - Z975 * stddev() / Math.sqrt(trials);
     }
 
     // high endpoint of 95% confidence interval
     public double confidenceHi() {
-        return mean() + z975 * stddev() / Math.sqrt(trials);
+        return mean() + Z975 * stddev() / Math.sqrt(trials);
     }
 
     // test client (see below)
